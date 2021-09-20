@@ -1,0 +1,10 @@
+fields:
+    domain:
+        label: ДОМЕН
+        span: auto
+        type: text
+    theme:
+        label: ТЕМА
+        showSearch: true
+        span: auto
+        type: dropdown

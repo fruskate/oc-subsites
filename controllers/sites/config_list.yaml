@@ -1,0 +1,12 @@
+list: $/frukt/subsites/models/site/columns.yaml
+modelClass: Frukt\SubSites\Models\Site
+title: Sites
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'frukt/subsites/sites/update/:id'

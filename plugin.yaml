@@ -1,0 +1,6 @@
+plugin:
+    name: 'frukt.subsites::lang.plugin.name'
+    description: 'frukt.subsites::lang.plugin.description'
+    author: Frukt
+    icon: oc-icon-arrow-right
+    homepage: ''

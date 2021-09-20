@@ -1,0 +1,7 @@
+columns:
+    domain:
+        label: ДОМЕН
+        type: text
+    theme:
+        label: ТЕМА
+        type: text

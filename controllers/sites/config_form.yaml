@@ -1,0 +1,10 @@
+name: Sites
+form: $/frukt/subsites/models/site/fields.yaml
+modelClass: Frukt\SubSites\Models\Site
+defaultRedirect: frukt/subsites/sites
+create:
+    redirect: 'frukt/subsites/sites/update/:id'
+    redirectClose: frukt/subsites/sites
+update:
+    redirect: frukt/subsites/sites
+    redirectClose: frukt/subsites/sites
