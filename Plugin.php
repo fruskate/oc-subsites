@@ -28,15 +28,18 @@ class Plugin extends PluginBase
 
     public function boot()
     {
-        $httpHost = Request::getHttpHost();
+        \Event::listen('cms.theme.getActiveTheme', function () {
 
-        $site = SiteModel::where('domain', $httpHost)->first();
+            $httpHost = Request::getHttpHost();
+            $url = parse_url(env('APP_URL'), PHP_URL_HOST);
 
-        if ($site) {
-            Theme::setActiveTheme($site->theme);
-        } else {
-            Theme::setActiveTheme('demo');
-        }
+            if ($httpHost != $url) {
+                $site = SiteModel::where('domain', $httpHost)->first();
+                if ($site) {
+                    return $site->theme;
+                }
+            }
+        });
 
     }
 }
